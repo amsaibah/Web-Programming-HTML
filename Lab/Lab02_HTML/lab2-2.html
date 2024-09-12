@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Canvas Stroke Text Example</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="600" height="300"></canvas>
+    
+    <script>
+        var canvas = document.getElementById('myCanvas');
+        var context = canvas.getContext('2d');
+
+        // Set the font style
+        context.font = "40px Georgia";
+        context.lineWidth = 3;
+        context.strokeStyle = '#F4C2C2'; // Baby pink color
+
+        // Draw stroke text for Name
+        context.strokeText('Name: Fatematus', 50, 80);
+
+        // Draw stroke text for Surname
+        context.strokeText('Surname: Shaheba', 50, 140);
+
+        // Draw stroke text for Nickname
+        context.strokeText('Nickname: Saibah', 50, 200);
+    </script>
+</body>
+</html>
+
