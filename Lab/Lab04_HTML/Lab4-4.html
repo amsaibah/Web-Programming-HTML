@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Person Form</h2>
+
+        <!-- Error Messages -->
+        <div class="alert alert-danger">
+            <strong>Error Messages.</strong>
+        </div>
+
+        <form>
+            <div class="row">
+                <!-- Title -->
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label for="ititle">Title</label>
+                        <input type="text" class="form-control" id="ititle" placeholder="Mr.">
+                    </div>
+                </div>
+
+                <!-- First Name -->
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label for="ifname">First Name</label>
+                        <input type="text" class="form-control" id="ifname" placeholder="Chee Kin">
+                    </div>
+                </div>
+
+                <!-- Last Name -->
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label for="ilname">Last Name</label>
+                        <input type="text" class="form-control" id="ilname" placeholder="Lim">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Gender -->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="igender">Gender</label>
+                        <select class="form-control" id="igender">
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Date of Birth -->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="idob">Date of Birth</label>
+                        <input type="text" class="form-control" id="idob" placeholder="dd/mm/yyyy">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Address Section -->
+            <div class="row">
+                <!-- Street -->
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="istreet">Street</label>
+                        <input type="text" class="form-control" id="istreet" placeholder="Street">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- City -->
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="icity">City</label>
+                        <input type="text" class="form-control" id="icity" placeholder="City">
+                    </div>
+                </div>
+
+                <!-- State -->
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="istate">State</label>
+                        <input type="text" class="form-control" id="istate" placeholder="State">
+                    </div>
+                </div>
+
+                <!-- Post Code -->
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="ipostcode">Post Code</label>
+                        <input type="text" class="form-control" id="ipostcode" placeholder="Post Code">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Country -->
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="icountry">Country</label>
+                        <select class="form-control" id="icountry">
+                            <option>Country</option>
+                            <option>United States</option>
+                            <option>Canada</option>
+                            <option>Australia</option>
+                            <!-- Add more countries as needed -->
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Register Button -->
+            <div class="row">
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
