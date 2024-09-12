@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Input Form</title>
+</head>
+<body>
+
+    <form action="save.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <fieldset>
+            <legend>Age</legend>
+            <input type="radio" id="age1" name="age" value="<18">
+            <label for="age1">&lt;18</label>
+            <input type="radio" id="age2" name="age" value="19-35">
+            <label for="age2">19-35</label>
+            <input type="radio" id="age3" name="age" value="36-48">
+            <label for="age3">36-48</label>
+            <input type="radio" id="age4" name="age" value=">49">
+            <label for="age4">&gt;49</label>
+        </fieldset><br>
+
+        <label for="profession">Profession:</label>
+        <input type="text" id="profession" name="profession"><br><br>
+
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+            <option value="Thailand">Thailand</option>
+            <option value="Malaysia">Malaysia</option>
+            <option value="Hong Kong">Hong Kong</option>
+            <option value="China">China</option>
+        </select><br><br>
+
+        <fieldset>
+            <legend>Interests</legend>
+            <input type="checkbox" id="interest1" name="interests[]" value="Photography">
+            <label for="interest1">Photography</label>
+            <input type="checkbox" id="interest2" name="interests[]" value="Music">
+            <label for="interest2">Music</label>
+            <input type="checkbox" id="interest3" name="interests[]" value="Cinema">
+            <label for="interest3">Cinema</label>
+            <input type="checkbox" id="interest4" name="interests[]" value="Computers">
+            <label for="interest4">Computers</label>
+        </fieldset><br>
+
+        <label for="howfound">How did you find out about us:</label><br>
+        <textarea id="howfound" name="howfound" rows="4" cols="50"></textarea><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
