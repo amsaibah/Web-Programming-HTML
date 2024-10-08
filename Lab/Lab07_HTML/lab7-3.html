@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 7-3 - Load Method</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+<h1>Load External Content with jQuery</h1>
+<button id="loadButton">Show Text</button>
+
+<div id="content"></div>
+
+<script>
+    $(document).ready(function() {
+        $('#loadButton').click(function() {
+            $('#content').load('mytext.html #mytext'); // Load only the element with id 'mytext'
+        });
+    });
+</script>
+
+</body>
+</html>

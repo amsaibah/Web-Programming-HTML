@@ -1,0 +1,1 @@
+Welcome to XMLHttpRequest demo. This text is coming from info.txt!

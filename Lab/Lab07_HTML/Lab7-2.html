@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 7-2 - Displaying XML Data</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        /* Apply different background colors to even and odd rows */
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+<h2>CD Catalog</h2>
+<table id="cdTable">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Artist</th>
+            <th>Country</th>
+            <th>Company</th>
+            <th>Price</th>
+            <th>Year</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Data will be inserted here -->
+    </tbody>
+</table>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $.ajax({
+            type: "GET",
+            url: "cd_catalog.xml", // Place the XML file in the same directory
+            dataType: "xml",
+            success: function(xml) {
+                $(xml).find('CD').each(function() {
+                    var title = $(this).find('TITLE').text();
+                    var artist = $(this).find('ARTIST').text();
+                    var country = $(this).find('COUNTRY').text();
+                    var company = $(this).find('COMPANY').text();
+                    var price = $(this).find('PRICE').text();
+                    var year = $(this).find('YEAR').text();
+
+                    var row = '<tr><td>' + title + '</td><td>' + artist + '</td><td>' + country + '</td><td>' + company + '</td><td>' + price + '</td><td>' + year + '</td></tr>';
+                    $('#cdTable tbody').append(row);
+                });
+            },
+            error: function() {
+                alert("Error loading XML data");
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
